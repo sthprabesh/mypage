@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from 'react';
+import './App.css'; // You can keep this for styling, or remove it
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const About = () => {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <h2>About</h2>
+      <p>This section provides information about the purpose of the page or the organization.</p>
     </>
-  )
-}
+  );
+};
 
-export default App
+const Services = () => {
+  return (
+    <>
+      <h2>Services</h2>
+      <p>This section outlines the services offered. It's a great place to highlight what you can provide.</p>
+    </>
+  );
+};
+
+const Contact = () => {
+  return (
+    <>
+      <h2>Contact</h2>
+      <p>This section includes contact details or a form for visitors to reach out.</p>
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <>
+      <h1>My React App</h1>
+      <About />
+      <Services />
+      <Contact />
+    </>
+  );
+};
+
+export default App;
